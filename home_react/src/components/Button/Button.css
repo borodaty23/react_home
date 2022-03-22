@@ -1,0 +1,38 @@
+.btn {
+  width: 250px;
+  height: 60px;
+  background-color: #ff4343;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: #e71414;
+}
+
+.btn:active {
+  background-color: #14c7e7;
+}
+
+a.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+button.button {
+  border: none;
+}
+
+.btn.active {
+  background-color: #700909;
+}
+
+.btn.active:hover {
+  background-color: #700909;
+}
