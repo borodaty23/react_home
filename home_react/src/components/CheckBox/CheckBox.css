@@ -1,0 +1,48 @@
+/* .checkInput {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.check {
+  margin-left: 1em;
+}
+
+.checkBox {
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 0.06em;
+  box-shadow: 0 0 0 0.1em #4a90e2;
+  margin-top: 0.2em;
+  margin-left: -1em;
+}
+
+.checkInput:checked + .checkBox {
+  background-color: #4a90e2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpolyline fill='none' stroke='%23fff' stroke-width='3' points='1.079 4.999 5 9 10.837 2'/%3E%3C/svg%3E");
+} */
+
+.input {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 0.06em;
+  box-shadow: 0 0 0 0.1em #4a90e2;
+  margin-top: 0.2em;
+  margin-left: -1em;
+}
+
+.active {
+  background-color: #4a90e2;
+}
