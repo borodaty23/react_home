@@ -9,7 +9,7 @@ import {News} from "./api/containers/news-container"
 import {Icon} from "./components/Icon/Icon"
 import {Img} from "./components/Img/Img"
 import {Input} from "./components/Input/Input"
-// import {Form} from "./components/Form/Form"
+import {Form} from "./components/Form/Form"
 import {CheckBox} from "./components/CheckBox/CheckBox"
 
 function App() {
@@ -69,21 +69,20 @@ function App() {
     {/* </ThemeProvider> */} 
 
 
-     {/* <Icon name = "cat" size={65}></Icon>
+      {/* <Icon name = "cat" size={65}></Icon>
 
-    <Img alt = "jopa" circle/>
+    <Img alt = "jopa" circle/> */}
 
-    <Input className="inputText" label = "text" id = "inputId" validators={validators}
+    <Input className="inputText" label = "text" id = "inputId" 
     errors={errors}
-    onInputValidation={onInputValidation}></Input>  */}
+    onInputValidation={onInputValidation}></Input>  
 
     
-    {/* <Form  validators={validators}
-    errors={errors}
-    onInputValidation={onInputValidation}></Form> */}
+    <Form errors={errors}
+    onInputValidation={onInputValidation}></Form>
 
 
-    <CheckBox></CheckBox>
+    {/* <CheckBox></CheckBox> */}
 
     </>
   );
