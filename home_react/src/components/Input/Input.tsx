@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import "./Input.css"
 
 interface IInput {
     id: string ;
@@ -7,9 +8,11 @@ interface IInput {
     // validators: any[];
     errors: string[];
     onInputValidation: any;
+    setErrors: any
+    display?:boolean
 }
 
-export const Input = ({ errors, onInputValidation, ...props }: IInput) => {
+ const Input = ({setErrors, errors, onInputValidation, ...props }: IInput) => {
   const [inputValue, setInputValue] = useState("");
   
   const inputChanges = ({target:{value}}: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,18 +21,19 @@ export const Input = ({ errors, onInputValidation, ...props }: IInput) => {
   };
 
   const inputValidation = () => {
-      onInputValidation(inputValue);
+      onInputValidation(inputValue, setErrors);
   };
 
   console.log("err2", errors)
     
   return (
     <>
-    <label className={props.className + "label"} htmlFor = {props.id}>
+    <label className={`${props.className + "Label"} ${props.display ? "block" : ""}`} htmlFor = {props.id}>
         {props.label}
-        <input className = {props.className} onBlur={inputValidation} onFocus = {inputValidation} onChange={inputChanges} type="text" id={props.id} />
+        <input value = {inputValue} className = "inputText" onBlur={inputValidation} onFocus = {inputValidation} onChange={inputChanges} type="text" id={props.id} />
     </label>
-    {errors.length !== 0 && errors.map((item) => <p key={item}>{item}</p>)}
+    {errors.length !== 0 && errors.map((item) => <p className="errorMsg" key={item}>{item}</p>)}
     </>
   )
 }
+export default React.memo(Input)

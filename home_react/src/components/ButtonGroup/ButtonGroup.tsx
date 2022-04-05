@@ -13,8 +13,7 @@ const ButtonGroup = ({className ,vertical, children}:IButtonGroup) => {
     doVertical = "vertical"
   }
 
-    let classButtonGroup = `${className} ${doVertical} `
-
+  let classButtonGroup = `${className} ${doVertical} `
 
   return (
     <div className = {classButtonGroup }>

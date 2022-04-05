@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.select{
+    width: 400px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.selectBtn{
+    padding: 15px 20px;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.selectContent{
+    position: absolute;
+    top: 110%;
+    left: 0;
+    padding: 10px;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}
+
+.selectItem{
+    padding: 10px;
+    transition: all 0.35s linear;
+}
+
+.selectItem:hover{
+    background-color: rgb(180, 224, 224);
+}

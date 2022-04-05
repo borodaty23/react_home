@@ -8,9 +8,12 @@ import {Context} from "./components/Context/Context"
 import {News} from "./api/containers/news-container"
 import {Icon} from "./components/Icon/Icon"
 import {Img} from "./components/Img/Img"
-import {Input} from "./components/Input/Input"
+import Input from "./components/Input/Input"
 import {Form} from "./components/Form/Form"
 import {CheckBox} from "./components/CheckBox/CheckBox"
+import { ButtonStyle } from "./components/styledComponents/Button/ButtonSt";
+import {Select} from "./components/Select/Select"
+import {SelectCustom} from "./components/Select/Select"
 
 function App() {
   
@@ -19,39 +22,10 @@ function App() {
   //   console.log("{f")
   // }
 
-  const [errors, setErrors] = useState<any[]>([]);
-
-  const inputValidationLength = (inputValue: string) => {
-    return !inputValue.length;
-  };
-
-  const inputValidationLengthCount = (inputValue: string) => {
-    return inputValue.length < 2;
-  };
-
-  const validators = [
-    { validator: inputValidationLength, errorMsg: "YOU HAVE TO WRIT SMT" },
-    {
-      validator: inputValidationLengthCount,
-      errorMsg: "YOU HAVE TO WRIT MORE"
-    }
-  ];
-
-  const onInputValidation = (inputValue: string) => {
-    console.log(inputValue);
-    const errors = validators
-      .map((item) => item.validator(inputValue) && item.errorMsg)
-      .filter((item) => item);
-    setErrors(errors);
-    console.log("errors", errors)
-  };
-
-
-
   return (
     <>
-    {/* <ThemeProvider theme = {themes}>
-    <ButtonGroup vertical className="wrapperButtonGroup">
+    <ThemeProvider theme = {themes}>
+    {/* <ButtonGroup vertical className="wrapperButtonGroup">
       <Button className="btn"/>
       <Button  className="btn"/>
     </ButtonGroup>
@@ -62,28 +36,32 @@ function App() {
 
     <Context/>
     
-    <News/>
+    <News/> */}
 
+    {/* <ButtonStyle>Button</ButtonStyle> */}
 
     {/* <ButtonClass disabled onClick={z} active children = "Default button" className="btn" type="submit"/> */}
-    {/* </ThemeProvider> */} 
 
 
       {/* <Icon name = "cat" size={65}></Icon>
 
-    <Img alt = "jopa" circle/> */}
+<Img alt = "jopa" circle/> */}
 
-    <Input className="inputText" label = "text" id = "inputId" 
+    {/* <Input setErrors={setErrors} className="inputText" label = "text" id = "inputId" 
     errors={errors}
-    onInputValidation={onInputValidation}></Input>  
+  onInputValidation={onInputValidation}></Input>  */}
 
     
-    <Form errors={errors}
-    onInputValidation={onInputValidation}></Form>
+    <Form ></Form> 
 
 
     {/* <CheckBox></CheckBox> */}
 
+    <Select></Select>
+
+    <SelectCustom></SelectCustom>
+
+  </ThemeProvider> 
     </>
   );
 }

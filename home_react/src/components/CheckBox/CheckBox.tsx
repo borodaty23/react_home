@@ -1,21 +1,19 @@
-import React, {useState} from 'react'
+import React, {Children, useState} from 'react'
 import './CheckBox.css'
 
-export const CheckBox = () => {
+interface ICheckBox{
+  children:string
+  check:boolean
+  setCheck:any
+}
 
-    const [ch, setCh] = useState(false)
-
+export const CheckBox = React.memo( ({children, check, setCheck}:ICheckBox) => {
+  console.log("render check")
   return (
-    // <label  className='check'> 
-    //     <span className='checkBox'></span>
-    //     <input   className='checkInput' id='' type="checkbox" />
-    //     lALA
-    // </label>
-
     <label >
-        <input className='input' onChange={() => setCh(!ch)} type="checkbox" />
-        <span className={`checkbox ${ch ? "active" : ""}`}/>
-        check
+        <input className='input' onChange={() => setCheck(!check)} type="checkbox" />
+        <span className={`checkbox ${check ? "active" : ""}`}/>
+        {children}
     </label>
   )
-}
+})

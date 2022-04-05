@@ -1,0 +1,18 @@
+.block{
+    display: block;
+}
+
+.errorMsg{
+    color: red;
+    font-size: 12px;
+    margin: 0 0 5px 0;
+    
+}
+
+.inputText{
+    display: block;
+}
+
+.inputTextFormLabel{
+    margin-bottom: 20px;
+}
