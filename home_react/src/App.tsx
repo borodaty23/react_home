@@ -14,6 +14,8 @@ import {CheckBox} from "./components/CheckBox/CheckBox"
 import { ButtonStyle } from "./components/styledComponents/Button/ButtonSt";
 import {Select} from "./components/Select/Select"
 import {SelectCustom} from "./components/Select/Select"
+import {Counter} from "./components/Counter/Counter"
+// import Countdown from "./components/Counter/Counter"
 
 function App() {
   
@@ -52,14 +54,18 @@ function App() {
   onInputValidation={onInputValidation}></Input>  */}
 
     
-    <Form ></Form> 
+    {/* <Form ></Form>  */}
 
 
     {/* <CheckBox></CheckBox> */}
 
-    <Select></Select>
+    {/* <Select></Select> */}
 
-    <SelectCustom></SelectCustom>
+    {/* <SelectCustom></SelectCustom> */}
+
+  <Counter></Counter>
+
+
 
   </ThemeProvider> 
     </>
